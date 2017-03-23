@@ -25,6 +25,7 @@
     <Button
         android:id="@+id/send"
         android:text="Enviar"
+        android:onClick="enviarDatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

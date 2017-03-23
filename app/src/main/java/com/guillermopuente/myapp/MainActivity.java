@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.guillermopuente.myapp.model.Alumno;
 
@@ -37,11 +39,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        
-
-
     }
+
+    /*
+    *---------------------------------------------------------------
+    * Enviar Datos
+    *---------------------------------------------------------------
+    *
+    * Obtiene el dato ingresado en el view EditText name y lo imprime dentro de un mensaje Toast
+    *
+    */
+    public void enviarDatos(View view){
+        EditText edtNombre = (EditText) findViewById(R.id.name);
+        String nombre = edtNombre.getText().toString();
+
+        Toast.makeText(getBaseContext(), "Felicidades tu nombre es " + nombre, Toast.LENGTH_LONG).show();
+    }
+
+
+
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
